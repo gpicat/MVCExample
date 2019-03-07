@@ -18,6 +18,7 @@ class ExampleBuilder: NSObject {
         let model: ExampleModelProtocol = ExampleModel()
         let router = ExampleRouter()
         let viewController = ExampleViewController(withView: view, model: model, router: router)
+        router.baseViewController = viewController
         return viewController
     }
 }

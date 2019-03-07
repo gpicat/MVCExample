@@ -10,6 +10,7 @@ import UIKit
 
 protocol ExampleViewDelegate: class {
     func viewDidSayHello()
+    func navigate()
 }
 
 protocol ExampleViewProtocol: class {
@@ -33,6 +34,12 @@ class ExampleView: UIView, ExampleViewProtocol {
     
     func setupView() {
         welcomeLabel.text = "Hello MVC"
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func navigationAction(_ sender: Any) {
+        delegate?.navigate()
     }
 }
 

@@ -31,5 +31,9 @@ class ExampleViewController: ExampleViewControllerType, ExampleViewDelegate, Exa
         
     }
     
+    func navigate() {
+        router?.navigate()
+    }
+    
 }
 
